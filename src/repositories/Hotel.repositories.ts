@@ -1,9 +1,9 @@
-// import { Prisma } from "@prisma/client";
+ import { Prisma } from "@prisma/client";
 
 import prismaClient from "../prisma/client"
-import { createHotelDTO } from "../dtos/hotel.dto";
+// import { createHotelDTO } from "../dtos/hotel.dto";
 
-export async function createHotelRepositories(hotelData: createHotelDTO) {
+export async function createHotelRepositories(hotelData: Prisma.HotelCreateInput) {
      try {
           console.log("Hotel Data :" , hotelData);
           const hotel = await prismaClient.hotel.create({
